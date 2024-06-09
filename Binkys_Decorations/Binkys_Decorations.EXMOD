@@ -1,0 +1,262 @@
+{
+    "name": "Binkys Decorations",
+    "author": "haws1290",
+    "description": "Added in a combination of free assets from the unreal engine store",
+    "fileName": "Binkys_Decorations",
+    "imageURL": "",
+    "readmeURL": "",
+    "version": "1",
+    "Level2": "True",
+    "Rows": [
+        {
+            "CurrentFile": "Building-D_BuildingPieces.json",
+            "File_Items": [
+            ]
+        },
+        {
+            "CurrentFile": "Items-D_ItemsStatic.json",
+            "File_Items": [
+                {
+                    "Name": "Bink_Ammo_Box",
+                    "Meshable": {
+                        "RowName": "Mesh_Bink_Ammo_Box"
+                    },
+                    "Itemable": {
+                        "RowName": "Item_Bink_Ammo_Box"
+                    },
+                    "Interactable": {
+                        "RowName": "Deployable"
+                    },
+                    "Focusable": {
+                        "RowName": "Focusable_1H"
+                    },
+                    "Highlightable": {
+                        "RowName": "Generic"
+                    },
+                    "Actionable": {
+                        "RowName": "Deployable"
+                    },
+                    "Usable": {
+                        "RowName": "Place"
+                    },
+                    "Deployable": {
+                        "RowName": "Bink_Ammo_Box"
+                    },
+                    "Durable": {
+                        "RowName": "Bink_Items"
+                    },
+                    "Inventory": {
+                        "RowName": "Storage_Metal_Crate_Medium"
+                    },
+                    "Decayable": {
+                        "RowName": "Decay_General"
+                    },
+                    "Weight": {
+                        "RowName": "HeavyDeployable"
+                    },
+                    "Audio": {
+                        "RowName": "MetalDeployable"
+                    },
+                    "Manual_Tags": {
+                        "GameplayTags": [
+                            {
+                                "TagName": "Audio.Shelter.Check"
+                            },
+                            {
+                                "TagName": "Item.Deployable.Storage"
+                            }
+                        ]
+                    },
+                    "Generated_Tags": {
+                        "GameplayTags": [
+                            {
+                                "TagName": "Audio.Shelter.Check"
+                            },
+                            {
+                                "TagName": "Item.Deployable.Storage"
+                            },
+                            {
+                                "TagName": "Traits.Meshable"
+                            },
+                            {
+                                "TagName": "Traits.Itemable"
+                            },
+                            {
+                                "TagName": "Traits.Interactable"
+                            },
+                            {
+                                "TagName": "Traits.Highlightable"
+                            },
+                            {
+                                "TagName": "Traits.Actionable"
+                            },
+                            {
+                                "TagName": "Traits.Usable"
+                            },
+                            {
+                                "TagName": "Traits.Deployable"
+                            },
+                            {
+                                "TagName": "Traits.Durable"
+                            },
+                            {
+                                "TagName": "Traits.Inventory"
+                            }
+                        ],
+                        "ParentTags": []
+                    }
+                }
+               
+            ]
+        },
+        {
+            "CurrentFile": "Items-D_ItemTemplate.json",
+            "File_Items": [
+                
+                {
+                    "Name": "Bink_Ammo_Box",
+                    "ItemStaticData": {
+                        "RowName": "Bink_Ammo_Box"
+                    }
+                }
+                
+            ]
+        },
+		
+        {
+            "CurrentFile": "Traits-D_Deployable.json",
+            "File_Items": [
+                
+                {
+                    "Name": "Bink_Ammo_Box",
+                    "Variants": [
+                        {
+                            "RowName": "Bink_Ammo_Box",
+                            "DataTableName": "D_DeployableSetup"
+                        }
+                    ],
+                    "EffectedByWeather": false
+                }
+            ]
+        },
+        {
+            "CurrentFile": "Deployables-D_DeployableSetup.json",
+            "File_Items": [
+                
+                {
+                    "Name": "Bink_Ammo_Box",
+                    "DeployableBlueprint": "/Game/BP/BP_Bink_Ammo_Box.BP_Bink_Ammo_Box_C",
+                    "PreviewStaticMesh": "/Game/BinkBox/SM_Bink_Ammo_Box.SM_Bink_Ammo_Box",
+                    "DeployedSound": "/Game/FMOD/Events/SFX/D_Buildables/SFX_BLD_IRON_DEPLOY.SFX_BLD_IRON_DEPLOY",
+                    "SnapToSurfaceNormal": false,
+                    "MaxRestackingAmount": 2
+                }
+            ]
+        },
+		{
+            "CurrentFile": "Crafting-D_ProcessorRecipes.json",
+            "File_Items": [
+                {
+                    "Name": "Bink_Ammo_Box",
+                    "Requirement": {
+                        "RowName": "Anvil_Bench_T4"
+                    },
+                    "RecipeSets": [
+						{
+                            "RowName": "Fabricator",
+                            "DataTableName": "D_RecipeSets"
+                        },
+                        {
+                            "RowName": "Anvil_Bench_T4",
+                            "DataTableName": "D_RecipeSets"
+                        }
+                    ],
+                    "ResourceCostMultipliers": [
+                        {
+                            "Value": "BaseIronBuildingCraftingCost_+%"
+                        }
+                    ],
+                    "Inputs": [
+                        {
+                            "Element": {
+                                "RowName": "Aluminium",
+                                "DataTableName": "D_ItemsStatic"
+                            },
+                            "Count": 1,
+                            "DynamicProperties": []
+                        },
+                        {
+                            "Element": {
+                                "RowName": "Steel_Ingot",
+                                "DataTableName": "D_ItemsStatic"
+                            },
+                            "Count": 1,
+                            "DynamicProperties": []
+                        },
+                        {
+                            "Element": {
+                                "RowName": "Steel_Screw",
+                                "DataTableName": "D_ItemsStatic"
+                            },
+                            "Count": 5,
+                            "DynamicProperties": []
+                        }
+                    ],
+                    "Outputs": [
+                        {
+                            "Element": {
+                                "RowName": "Bink_Ammo_Box",
+                                "DataTableName": "D_ItemTemplate"
+                            },
+                            "Count": 1,
+                            "DynamicProperties": []
+                        }
+                    ],
+                    "Audio": {
+                        "RowName": "Default"
+                    }
+                }
+			]
+		},
+        {
+            "CurrentFile": "Traits-D_Itemable.json",
+            "File_Items": [
+                {
+                    "Name": "Item_Bink_Ammo_Box",
+                    "DisplayName": "NSLOCTEXT(\"D_Itemable\", \"Item_Bink_Ammo_Box-DisplayName\", \"Ammo Crate\")",
+                    "Icon": "/Game/BinkBox/AmmoBoxIcon.AmmoBoxIcon",
+                    "Description": "NSLOCTEXT(\"D_Itemable\", \"Item_Bink_Ammo_Box-Description\", \"A ammo crate.\")",
+                    "FlavorText": "NSLOCTEXT(\"D_Itemable\", \"Item_Bink_Ammo_Box-FlavorText\", \"Free Unreal Asset imported by haws1290.\")",
+                    "Weight": 400,
+                    "MaxStack": 20
+                }
+                
+            ]
+        },
+        {
+            "CurrentFile": "Traits-D_Meshable.json",
+            "File_Items": [
+               
+                {
+                    "Name": "Mesh_Bink_Ammo_Box",
+                    "ItemMesh": "/Game/ASS/KIT/SM_KIT_Machining.SM_KIT_Machining",
+                    "EquipHandMesh": "/Game/ASS/KIT/SM_KIT_Iron.SM_KIT_Iron",
+                    "DeployableActor": "/Game/BP/BP_Bink_Ammo_Box.BP_Bink_Ammo_Box_C"
+                }
+                
+            ]
+        },
+        {
+            "CurrentFile": "Traits-D_Durable.json",
+            "File_Items": [
+                {
+                    "Name": "Bink_Items",
+                    "Max_Durability": 50000
+                }
+            ]
+        },
+        {
+            "CurrentFile": "EndOfMod"
+        }
+    ]
+}
